@@ -44,7 +44,7 @@ const TokenListDropdown: React.FC<{ children: (triggerDropdown: () => void, visi
         }
         else if (!pre && currentFromNetwork.network.chainId !== ethereumChainId) {
             disabled = {
-                text: `Please switch ${isMetaMaskHostedByFluent ? 'Fluent' : 'MetaMask'} to ${currentFromNetwork.network.chainName} first.`,
+                text: `Please switch ${isMetaMaskHostedByFluent ? 'Fluent' : 'MetaMask'} to ${currentFromNetwork.network.chainName} first. 1. ${currentFromNetwork.network.chainId}, 2. ${ethereumChainId}`,
                 onClickOk: () => switchToEthereum(currentFromNetwork.network),
                 okButtonText: 'Switch'
             }

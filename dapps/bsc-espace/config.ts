@@ -6,22 +6,22 @@ import { isProduction } from 'common/conf/Networks';
 
 const Config = {
     network: Networks.eSpace,
-    serverUrl: isProduction ? 'https://ebridge.shuttleflow.io/' : 'https://ebridge-testnet.shuttleflow.io/',
-    BridgeContractAddress: isProduction ? '0xf55460b8bc81ea65d7ae0aea2383ef69c8f2c62e' : '0x6c421153f5d506d4d1b9d586c4b32b9185dbf593',
+    serverUrl: isProduction ? 'http://54.200.214.66:8001/' : 'http://54.200.214.66:8001/',
+    BridgeContractAddress: isProduction ? '0x8fa9a165ac759e8fc35efb5a23acd2494c34811d' : '0x8fa9a165ac759e8fc35efb5a23acd2494c34811d',
     color: '#15C184',
     logo: ConfluxLogo,
     tokens: [
         {
-            name: 'Conflux Network',
-            symbol: 'CFX',
+            name: 'Conflux Test Network',
+            symbol: 'bmt',
             decimals: 18,
             isNative: true,
             address: '0x0000000000000000000000000000000000000001',
             icon: CFXIcon,
             PeggedToken: {
                 name: 'Pegged Conflux',
-                symbol: 'PeggedCFX',
-                address: isProduction ? '0x5ce35e15080737671799911a300f112221406bb5' : '0x43d2a9f6818a30cfd6251262d619dff0e7bc105d',
+                symbol: 'Peggedmt',
+                address: isProduction ? '0xe863ee58473e7fb3ad4d874a377bcf1607b8a381' : '0xe863ee58473e7fb3ad4d874a377bcf1607b8a381',
                 decimals: 18,
                 icon: TokenDefaultIcon,
                 isPeggedToken: true
@@ -31,20 +31,20 @@ const Config = {
     chains: [
         {
             network: Networks.bsc,
-            BridgeContractAddress: isProduction ? '0xf55460b8bc81ea65d7ae0aea2383ef69c8f2c62e' : '0xe1fab6d373fabcb16fb092deadf17cc20b196cb5',
+            BridgeContractAddress: isProduction ? '0xf63794446dbf0d92fac1a12ac85a0990e7a5a39a' : '0xf63794446dbf0d92fac1a12ac85a0990e7a5a39a',
             color: '#F3BA2F',
             logo: 'https://bin.bnbstatic.com/static/images/common/logo.png',
             tokens: [
                 {
-                    name: 'BSC Conflux',
-                    symbol: 'bCFX',
-                    address: isProduction ? '0x045c4324039dA91c52C55DF5D785385Aab073DcF' : '0xef3f743830078a9cb5ce39c212ec1ca807e45fe1',
+                    name: 'Local BSC Conflux',
+                    symbol: 'mt',
+                    address: isProduction ? '0x16547cb6514d3d6b5be1578595fd65045dd10677' : '0x16547cb6514d3d6b5be1578595fd65045dd10677',
                     decimals: 18,
                     icon: CFXIcon,
                     PeggedToken: {
                         name: 'Pegged BSC Conflux',
-                        symbol: 'PeggedbCFX',
-                        address: isProduction ? '0x5ce35e15080737671799911a300f112221406bb5' : '0xb7cd26c41bd8b120735273150b5255377ba1978f',
+                        symbol: 'Peggedmt',
+                        address: isProduction ? '0x16547cb6514d3d6b5be1578595fd65045dd10677' : '0x16547cb6514d3d6b5be1578595fd65045dd10677',
                         decimals: 18,
                         icon: TokenDefaultIcon,
                         isPeggedToken: true

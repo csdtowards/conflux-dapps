@@ -77,14 +77,14 @@ const AllNetworks: Record<string, Network> = {
             decimals: 18,
         },
     },
-    '97': {
-        chainId: '97',
+    '2001': {
+        chainId: '2001',
         chainName: 'BSC (Testnet)',
-        rpcUrls: ['https://data-seed-prebsc-1-s1.binance.org:8545/'],
+        rpcUrls: ['http://54.200.214.66:12000/'],
         blockExplorerUrls: ['https://testnet.bscscan.com'],
         nativeCurrency: {
-            name: 'Binance Coin',
-            symbol: 'BNB',
+            name: 'mytoken',
+            symbol: 'mt',
             decimals: 18,
         },
     },
@@ -104,7 +104,7 @@ const AllNetworks: Record<string, Network> = {
 const Networks = {
     core: AllNetworks[isProduction ? '1029' : location.host.startsWith('net8888') ? '8888' : import.meta.env.VITE_CORE_NETWORK || '1'],
     eSpace: AllNetworks[isProduction ? '1030' : '71'],
-    bsc: AllNetworks[isProduction ? '56' : '97'],
+    bsc: AllNetworks[isProduction ? '2001' : '2001'],
 } as const;
 
 export default Networks;
